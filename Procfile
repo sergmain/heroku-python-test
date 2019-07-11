@@ -1,0 +1,1 @@
+web: java $JAVA_OPTS  -XX:-UseGCOverheadLimit -Xms100m -Xmx100m -Dserver.port=$PORT -jar target/test-python-with-spring-boot.jar

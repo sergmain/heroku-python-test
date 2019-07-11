@@ -1,0 +1,5 @@
+applications:
+- name: metaheuristic
+  path: ./target/test-python-with-spring-boot.jar
+  env:
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+}}'
