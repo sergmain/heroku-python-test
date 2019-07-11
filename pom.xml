@@ -54,7 +54,7 @@
 	</dependencies>
 
 	<build>
-        <finalName>jelastic-spring-boot</finalName>
+        <finalName>test-python-with-spring-boot</finalName>
 		<plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
