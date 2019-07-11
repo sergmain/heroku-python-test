@@ -50,11 +50,15 @@ public class SimpleApp {
             if (globals.isSslRequired) {
                 http.requiresChannel().antMatchers("/**").requiresSecure();
             }
-
         }
     }
     @RequestMapping("/")
-    public @ResponseBody String index1() throws IOException, InterruptedException {
+    public @ResponseBody String index1() {
+        return "Hello, world!";
+    }
+
+    @RequestMapping("/version")
+    public @ResponseBody String version() throws IOException, InterruptedException {
         File execDir = new File("target/exec-dir");
         if (!execDir.exists()) {
             execDir.mkdirs();
@@ -63,7 +67,7 @@ public class SimpleApp {
         ExecProcessService.SnippetExecResult r = execProcessService.execCommand(
                 List.of("python", "--version"), execDir, consoleLogFile, null, "python");
 
-        return "Hello, world! isOk: " + r.isOk +", console: " + r.console;
+        return "Version is: isOk: " + r.isOk +", console: " + r.console;
     }
 
     public static void main(String[] args) {
