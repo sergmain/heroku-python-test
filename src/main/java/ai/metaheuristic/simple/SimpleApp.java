@@ -52,6 +52,7 @@ public class SimpleApp {
             }
         }
     }
+
     @RequestMapping("/")
     public @ResponseBody String index1() {
         return "Hello, world!";
